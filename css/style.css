@@ -685,7 +685,32 @@ a:focus {
   height: 135px;
 }
 
+@keyframes wiggle {
+  0%, 7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%, 100% {
+    transform: rotateZ(0);
+  }
+}
+
 .contact_section button {
+  animation: wiggle 2s linear infinite;
   border: none;
   display: inline-block;
   font-family: 'Merriweather Sans', sans-serif;
@@ -693,10 +718,11 @@ a:focus {
   padding: 10px 55px;
   background-color: #0355cc;
   border: 1px solid #0355cc;
-  border-radius: 0;
+  border-radius: 22px;
   color: #ffffff;
   margin-top: 15px;
 }
+
 
 .contact_section button:hover {
   background-color: transparent;
